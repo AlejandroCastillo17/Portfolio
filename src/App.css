@@ -1,0 +1,18 @@
+body, html {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    display: flex;
+    background-color: black;
+}
+
+#app {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+}
+
+
+

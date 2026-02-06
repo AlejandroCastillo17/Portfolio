@@ -1,0 +1,1569 @@
+html {
+  font-size: 16px;
+}
+
+.main-content {
+    flex-grow: 1; 
+    margin-left: 295px; 
+    padding: 0;
+    min-height: 100vh;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    background-color: #141414;
+    scroll-behavior: smooth;
+    justify-items: center;
+    max-width: 1200px;
+}
+
+/* =============================
+        SECCIÓN INICIO
+============================= */
+
+#inicio {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #242424, #000000 );
+}
+
+.ini {
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+}
+
+.ini h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin:0;
+    margin-bottom: 10px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ini h2{
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin:0;
+    color: #fffb04;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: escribiendo 5s steps(45, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+.ini div {
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.ini p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    font-family: monospace;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: rgb(228, 228, 228);
+    text-align: center;                                         
+    padding: 0px 25px;
+}
+
+.ini button {
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #444444; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out; 
+    outline: none;
+}
+      
+.ini button:hover {
+    box-shadow: 0px 8px 16px #fffb04;
+    color: #fffb04;
+}
+
+/* Animación de escribir */
+@keyframes escribiendo {
+    from { width: 0 }
+    to { width: 25ch }
+}
+
+/* =============================
+         SOBRE MI
+============================= */
+
+#sobre-mi {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #242424, #000000);
+}
+
+.sobremi {
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+}
+
+.sobremi h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin:0;
+    color:#fffb04;
+    text-align: center;
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    animation: escribiendo 3.5s steps(35, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+.sobremi div {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.sobremi p {
+    font-size: 1.25rem; 
+    font-weight: 400;
+    font-family: monospace;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: rgb(228, 228, 228);
+    text-align: center;                                         
+    padding: 0px 25px;
+}
+
+/* =============================
+        PROYECTOS (RESPONSIVE)
+============================= */
+
+/* contenedor general */
+#proyectos {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #242424, #000000);
+}
+
+.proyetos {
+    width: 80%;
+    text-align: center;
+}
+
+/* título */
+.proyetos h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 25px;
+
+    animation: escribiendo 3.5s steps(35, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+/* usamos grid para que las tarjetas respondan automáticamente */
+.proyetos ul {
+    width: 100%;
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0;
+    margin: 50px 15px 20px 15px;
+    list-style: none;
+}
+
+/* tarjeta */
+.proyetos li {
+    list-style: none;
+    width: 90%;
+    height: 180px;
+    background: linear-gradient(to right,#242424, #000000);
+    padding: 0; /* padding lo manejo dentro de .card-inner */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* pequeño zoom en hover (pantallas grandes) */
+@media (min-width: 769px) {
+    .proyetos li:hover {
+        transform: scale(1.03);
+    }
+}
+
+/* inner wrapper: organiza imagen + info verticalmente */
+.p_dorchips, .p_qsabores, .p_lcv {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+    box-sizing: border-box;
+    min-height: 210px;
+}
+
+/* IMAGEN: por defecto estática (ocupando la parte superior) */
+.p-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* ICON LINK (github) */
+.p-link {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    opacity: 0.9;
+    z-index: 5;
+    transition: transform 0.2s;
+    color: inherit; 
+    text-decoration: none;
+}
+.p-link:hover { 
+    transform: scale(1.02);   
+    color: #000000; 
+    text-decoration: none; 
+}
+
+/* Info de la tarjeta */
+.p-info {
+    position: relative;
+    z-index: 2;
+}
+
+
+.proyetos li h2 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #fffb04;
+    margin: 0 0 6px 0;
+}
+
+.proyetos li p {
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 400;
+    line-height: 1.45;
+    margin: 0 0 10px 0;
+}
+
+/* logos de tecnologías dentro de la tarjeta */
+.proyetos li .p-info > div img {
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* =============================
+        EDUCACIÓN
+============================= */
+
+#educacion {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, #242424, #000000);
+}
+
+.educa {
+    width: 80%;
+    text-align: center;
+}
+
+.educa h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin:0;
+    color:#fffb04;
+    text-align: center;
+    padding-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    animation: escribiendo 3.5s steps(35, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+.cont-edu {
+    width: 70%;
+    height: 130px;
+    background: linear-gradient(to right,#242424, #000000);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    margin: 45px auto;
+}
+
+
+.cont-edu h3{
+    font-size: 1rem;
+    font-weight: 500;
+    margin:0 0 15px 0;
+}
+
+.cont-edu h4 {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin:0 0 15px 0;
+}
+
+.edu, .edu2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.educa button {
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #444444; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out; 
+    outline: none;
+}
+      
+.educa button:hover {
+    box-shadow: 0px 8px 16px #fffb04;
+    color: #fffb04;
+}
+
+/* =============================
+      MODAL CERTIFICADOS
+============================= */
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+}
+  
+.modal-contenido {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    position: relative;
+    text-align: center;
+    overflow:hidden
+}
+  
+.modal-contenido img {
+    width: auto;
+    max-width: 85vw;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+    overflow:hidden
+}
+
+.cerrar {
+    background:#111;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+}
+
+.cerrar:active {
+    outline: none;
+}
+
+.cerrar:hover {
+    color: #fffb04;
+}
+
+/* =============================
+     COMPETENCIAS
+============================= */
+
+#competencias {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #242424, #000000);
+}
+
+.comp {
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+}
+
+.comp h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin:30px 0 20px 0;
+    color:white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    animation: escribiendo 3.5s steps(35, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+.comp h2 {
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin:0 0 3px 0;
+    color: #fffb04;
+    font-family: monospace;
+}
+
+.comp div img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    padding-right: 12px;
+    margin:0;
+}
+
+.comp div {
+    margin-bottom: 25px;
+}
+
+.comp div img:hover {
+    animation: rebote 1s;
+}
+
+/* =============================
+         CONTACTO
+============================= */
+
+#contacto {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #242424, #000000);
+}
+
+.contenedor {
+    border-radius: 15px;
+    width: 80%;
+    text-align: center;
+    padding-bottom: 20px;
+    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+}
+
+.contenedor h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin:35px 0 30px 0;
+    color:#fffb04;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    animation: escribiendo 3.5s steps(35, end) infinite;
+    white-space: nowrap;
+    display: inline-block;  
+    overflow: hidden;
+}
+
+.contac {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    color: #fffb04;
+    padding-bottom:20px ;
+}
+
+.contac p {
+    font-family: monospace;
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.contac a {
+    text-decoration: underline;
+    padding-left: 10px;
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: aqua;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.icons a {
+    color: #fffb04;
+}
+
+.icons svg:hover {
+    animation: rebote 1s;
+}
+
+/* =============================
+       ANIMACIÓN REBOTE
+============================= */
+
+@keyframes rebote {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+}
+
+
+/* *************************************************************************************************** */
+
+
+/* =============================
+        RESPONSIVE
+============================= */
+
+/* ======================================================
+   TABLET (max-width: 1024px)
+====================================================== */
+
+@media (max-width: 1024px) {
+
+    /* Layout general */
+    .main-content {
+        margin-left: 0;
+    }
+        
+    /* inicio */ 
+    .ini h1 {
+        font-size: 2.5rem;
+    }
+
+    .ini h2{
+        font-size: 1.9rem;
+    }
+
+    .ini p {
+        font-size: 1.25rem;
+        line-height: 1.9;
+    }
+
+    /* sobremi */
+    .sobremi h1 {
+        font-size: 2.5rem;
+    }
+
+    .sobremi p {
+        font-size: 1.25rem;
+        line-height: 1.9;
+    }
+
+    /* Proyectos */
+    .proyetos h1 {
+        font-size: 2.5rem;
+        margin-bottom: 25px;
+    }
+
+    .proyetos li h2 {
+        font-size: 1.1rem;
+    }
+
+    .proyetos li p {
+        font-size: 0.9rem;
+    }
+
+    .proyetos ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        margin: 40px 15px 20px 12px;
+    }
+
+    .proyetos li {
+        height: 335px;
+    }
+
+    .p-img {
+        height: 130px;
+    }
+
+    .proyetos li .p-info > div img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .p-link {
+        top: 20px;
+        right: 20px;
+    }
+
+    /* educacion */
+    .cont-edu {
+        width: 80%;
+    }
+    .educa h1 {
+        font-size: 2.5rem;
+    }
+
+    .cont-edu h3{
+        font-size: 1.05rem;
+    }
+
+    .cont-edu h4 {
+        font-size: 0.95rem;
+    }
+
+    .modal-contenido {
+        max-width: 70%;
+        max-height: 70%;
+    }
+
+    .modal-contenido img {
+        max-width: 70vw;
+        max-height: 70vh;
+    }
+
+    /* competencias */
+    .comp h1 {
+        font-size: 2.5rem;
+    }
+
+    .comp h2 {
+        font-size: 1.25rem;
+    }
+
+    .comp div img {
+        width: 45px;
+        height: 45px;
+    }
+
+    /* contacto */ 
+    .contenedor h1 {
+        font-size: 2.5rem;
+    }
+
+    .contac {
+        gap: 5px;
+    }
+
+    .contac p {
+        font-size: 1.15rem;
+    }
+
+    .contac a {
+        font-size: 1.15rem;
+        padding-left: 5px;
+    }
+
+    .rata {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* ======================================================
+   TABLET HORIZONTAL (landscape)
+====================================================== */
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    /* Layout general */
+    .main-content {
+        margin-left: 220px; 
+    }
+
+    /* Proyectos */
+    .proyetos ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        width: 100%;
+        margin: 30px 15px 20px 12px;
+    }
+
+    .proyetos li {
+        height: 200px;
+    }
+
+    .p-img {
+        height: 200px;
+    }
+
+    .p-link {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* ======================================================
+   DESKTOP (>= 769px)
+====================================================== */
+
+@media (min-width: 769px) {
+
+    .p-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        border-radius: 0;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 20px;
+        min-height: 250px;
+    }
+
+    .proyetos li:hover .p-info {
+        opacity: 0;
+        transition: opacity 0.35s ease-in-out;
+    }
+
+    .proyetos li:hover .p-img,
+    .proyetos li:hover .p-link {
+        opacity: 1;
+    }
+
+    .p-link {
+        opacity: 0;
+    }
+}
+
+/* ======================================================
+   DESKTOP VERTICAL (portrait)
+====================================================== */
+
+@media (min-width: 769px) and (orientation: portrait) {
+
+    /* Proyectos */
+    .proyetos li {
+        height: 200px;
+    }
+
+    .p-img {
+        height: 200px;
+    }
+
+    .p-link {
+        top: 8px;
+        right: 8px;
+    }
+
+}
+
+/* ======================================================
+   MOBILE estándar (portrait)
+====================================================== */
+
+@media (max-width: 480px) and (orientation: portrait) {
+
+    /* Layout general */
+    .main-content {
+        margin-left: 0;
+    }
+        
+    /* inicio */ 
+    .ini {
+        width: 100%;
+        padding: 0 20px 20px 20px;
+    }
+
+    .ini h1 {
+        font-size: 1.8rem;
+    }
+
+    .ini div {
+        margin: 20px 0;
+    }
+
+    .ini h2{
+        font-size: 1.4rem;
+    }
+
+    .ini p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .ini button {
+        font-size: 0.95rem;
+        padding: 12px 18px;
+        min-height: 44px;
+        margin-top: 15px;
+    }
+
+    /* sobremi */
+    .sobremi h1 {
+        font-size: 1.55rem;
+        padding-top: 30px;
+    }
+
+    .sobremi p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .sobremi div {
+        margin: 20px 0;
+    }
+
+    /* Proyectos */
+    .proyetos h1 {
+        font-size: 1.55rem;
+        margin-top: 45px;
+    }
+
+    .proyetos ul {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        width: 100%;
+        margin-left: 15px;
+        margin: 0;
+    }
+
+    .p-img {
+        height: 115px;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 14px;
+    }
+
+    .proyetos li {
+        width: 100%;
+        height: auto;
+    }
+
+    .proyetos li h2 {
+        font-size: 1.10rem;
+    }
+
+    .proyetos li p {
+        font-size: 1rem;
+    }
+
+    .proyetos li .p-info > div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .p-link {
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Educacion */
+    .educa h1{
+        font-size: 1.55rem;
+        padding-top: 0;
+    }
+
+    .cont-edu {
+        height: auto;
+    }
+
+    .cont-edu h3{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .cont-edu h4 {
+        font-size: 0.95rem;
+    }
+
+    .cont-edu button {
+        padding: 10px 18px;
+    }
+
+    .edu, .edu2 {
+        gap: 5px;
+    }
+
+    /* Competencias */
+    .comp h1 {
+        font-size: 1.55rem;
+    }
+
+    .comp h2 {
+        font-size: 1rem;
+    }
+
+    .comp div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Contacto */
+    .contenedor h1 {
+        font-size: 1.55rem;
+    }
+
+    .contac {
+        padding-right: 20px;
+    }
+
+    .contac p {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .contac a {
+        font-size: 0.8rem;
+    }
+
+    .contac a[href^="mailto"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+}
+
+/* ======================================================
+   MOBILE Landscape
+====================================================== */
+
+@media (orientation: landscape) and (max-height: 500px) {
+
+    /* Layout general */
+    .main-content {
+        margin-left: 0;
+    }
+
+    /* inicio */ 
+    .ini h1 {
+        line-height: 1.4;
+        margin-top: 110px;
+    }
+
+    .ini h2{
+        margin-bottom: 130px;
+    }
+
+    .ini p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .ini div {
+        margin-bottom: 30px;
+    }
+
+    .ini button {
+        padding: 12px 26px;
+        margin-bottom: 100px;
+    }
+
+    /* sobremi */
+    .sobremi h1 {
+        font-size: 1.55rem;
+        padding-top: 30px;
+    }
+
+    .sobremi p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .sobremi div {
+        margin: 10px 0;
+    }
+
+    /* Proyectos */
+    .proyetos h1 {
+        font-size: 1.55rem;
+        margin-top: 45px;
+    }
+
+    .proyetos ul {
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        width: 100%;
+        margin: 20px 15px 20px 12px;
+    }
+
+    .p-img {
+        height: 100%;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 14px;
+    }
+
+    .proyetos li {
+        width: 90%;
+        height: 80%;
+    }
+
+    .proyetos li h2 {
+        font-size: 1.10rem;
+    }
+
+    .proyetos li p {
+        font-size: 1rem;
+    }
+
+    .proyetos li .p-info > div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .p-link {
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Educacion */
+    .educa h1{
+        font-size: 1.55rem;
+        margin-top: 5px;
+    }
+
+    .cont-edu {
+        height: auto;
+        margin: 30px auto;
+    }
+
+    .cont-edu h3{
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .cont-edu h4 {
+        font-size: 0.95rem;
+    }
+
+    .cont-edu button {
+        padding: 10px 18px;
+    }
+
+    .edu, .edu2 {
+        gap: 5px;
+    }
+
+    .modal-contenido {
+        max-height: 80%;
+    }
+
+    .modal-contenido img {
+        max-height: 70vh;
+    }
+
+    /* Competencias */
+    .comp h1 {
+        font-size: 1.55rem;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .comp {
+        padding: 0;
+    }
+
+    .comp div {
+        margin-bottom: 15px;
+    }
+
+    .comp h2 {
+        font-size: 1rem;
+    }
+
+    .comp div img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Contacto */
+    .contenedor h1 {
+        font-size: 1.55rem;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    .contenedor {
+        padding-bottom: 10px;
+    }
+
+    .contac {
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+
+    .contac p {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .contac a {
+        font-size: 0.8rem;
+    }
+
+    .contac a[href^="mailto"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+}
+
+
+/* ======================================================
+   MOBILE PEQUEÑO 
+====================================================== */
+
+@media (max-width: 400px) and (orientation: portrait) {
+
+    /* inicio */
+    .ini h1 {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
+    .ini div {
+        margin: 15px 0;
+    }
+
+    .ini h2{
+        font-size: 1.1rem;
+    }
+
+    .ini p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .ini button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        min-height: 44px;
+        margin-top: 5px;
+    }
+
+    /* sobremi */
+    .sobremi {
+        height: 80vh;
+    }
+
+    .sobremi h1 {
+        font-size: 1.1rem;
+        padding-top: 40px;
+    }
+
+    .sobremi p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .sobremi div {
+        margin: 15px 0;
+    }
+
+    /* Proyectos */
+    .proyetos h1 {
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .proyetos ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .p-img {
+        height: 85px;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 14px;
+    }
+
+    .proyetos li {
+        width: 100%;
+        height: auto;
+    }
+
+    .proyetos li h2 {
+        font-size: 0.95rem;
+    }
+
+    .proyetos li p {
+        font-size: 0.75rem;
+    }
+
+    .proyetos li .p-info > div img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .p-link {
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Educacion */
+    .educa h1{
+        font-size: 1.1rem;
+        margin-top: 25px;
+    }
+
+    .cont-edu {
+        margin: 25px auto;
+    }
+
+    .cont-edu h3{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .cont-edu h4 {
+        font-size: 0.8rem;
+    }
+
+    .cont-edu button {
+        padding: 6px 10px;
+    }
+
+    .edu, .edu2 {
+        gap: 5px;
+    }
+
+    /* Competencias */
+    .comp h1 {
+        font-size: 1.1rem;
+    }
+
+    .comp h2 {
+        font-size: 0.8rem;
+    }
+
+    .comp div img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Contacto */
+    .contenedor h1 {
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .contac {
+        padding-right: 20px;
+    }
+
+    .contac p {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .contac a {
+        font-size: 0.8rem;
+    }
+
+    .contac a[href^="mailto"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .ratas {
+        width: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 375px) {
+
+    .p-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        border-radius: 0;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 20px;
+        min-height: 250px;
+    }
+
+    .proyetos li:hover .p-info {
+        opacity: 0;
+        transition: opacity 0.35s ease-in-out;
+    }
+
+    .proyetos li:hover .p-img,
+    .proyetos li:hover .p-link {
+        opacity: 1;
+    }
+
+    .p-link {
+        opacity: 0;
+    }
+
+    .proyetos li h2 {
+        font-size: 0.85rem;
+    }
+
+    .proyetos li p {
+        font-size: 0.8rem;
+    }
+
+}
+
+/* moviles muy pequeños */
+
+@media (max-width: 360px) and (orientation: portrait) {
+        
+    /* inicio */
+    .ini h1 {
+        font-size: 1.4rem;
+        margin-top: 30px;
+    }
+
+    .ini div {
+        margin: 15px 0;
+    }
+
+    .ini h2{
+        font-size: 1.05rem;
+    }
+
+    .ini p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .ini button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+        min-height: 44px;
+        margin-top: 5px;
+    }
+
+    /* sobremi */
+    .sobremi {
+        height: 80vh;
+    }
+
+    .sobremi h1 {
+        font-size: 1.1rem;
+        padding-top: 25px;
+    }
+
+    .sobremi p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .sobremi div {
+        margin: 15px 0;
+    }
+
+    /* Proyectos */
+    .proyetos h1 {
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .proyetos ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        margin: 0;
+    }
+
+    .p-img {
+        height: 85px;
+    }
+
+    .p_dorchips,
+    .p_qsabores,
+    .p_lcv {
+        padding: 14px;
+    }
+
+    .proyetos li {
+        width: 100%;
+        height: auto;
+    }
+
+    .proyetos li h2 {
+        font-size: 0.95rem;
+    }
+
+    .proyetos li p {
+        font-size: 0.75rem;
+    }
+
+    .proyetos li .p-info > div img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .p-link {
+        top: 20px;
+        right: 20px;
+    }
+
+    /* Educacion */
+    .educa h1{
+        font-size: 1.1rem;
+        margin-top: 25px;
+    }
+
+    .cont-edu {
+        margin: 25px auto;
+    }
+
+    .cont-edu h3{
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .cont-edu h4 {
+        font-size: 0.8rem;
+    }
+
+    .cont-edu button {
+        padding: 6px 10px;
+    }
+
+    .edu, .edu2 {
+        gap: 5px;
+    }
+
+    /* Competencias */
+    .comp h1 {
+        font-size: 1.1rem;
+    }
+
+    .comp h2 {
+        font-size: 0.8rem;
+    }
+
+    .comp div img {
+        width: 25px;
+        height: 25px;
+    }
+
+    /* Contacto */
+    .contenedor h1 {
+        font-size: 1.1rem;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+
+    .contac {
+        padding-right: 20px;
+    }
+
+    .contac p {
+        font-size: 0.8rem;
+        width: 60%;
+    }
+
+    .contac a {
+        font-size: 0.8rem;
+    }
+
+    .contac a[href^="mailto"] {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .ratas {
+        width: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 320px) {
+    /* inicio */
+    .ini h1 {
+        margin-top: 50px;
+    }
+}
+
+
+
+

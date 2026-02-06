@@ -1,0 +1,434 @@
+
+.sidebar-container {
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to right, #242424, #000000);
+    color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 18px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    transform: translateX(0);
+    transition: transform 0.35s ease-out;
+}
+
+.sidebar img {
+    width: 215px;
+    height: 230px;
+    border-radius: 30%;
+    filter: drop-shadow(0 10px 25px rgb(255, 251, 4, 0.3));
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    width: 100%;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 6px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.sidebar a.active-link {
+    color: #fffb04;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn {
+    display: none;
+}
+
+.img {
+    text-align: center;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.overlay.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* RESPONSIVE */
+
+/* Desktop (Monitores Grandes) */
+
+@media (min-width: 1400px) {
+    .sidebar {
+        padding-top: 100px;
+    }
+}
+
+/* ======================================================
+   DESKTOP VERTICAL (portrait)
+====================================================== */
+
+@media (min-width: 769px) and (orientation: portrait) {
+
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        /*padding: 0;
+        background:transparent;
+        height: 60vh;*/
+    }
+
+    .div {
+        margin-top: 350px;
+        /*background: linear-gradient(to right, #000000, #242424);
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top-right-radius: 35px;
+        border-bottom-right-radius: 35px;
+        border: 2px solid #111;*/
+    }
+
+    .btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #111;
+        color: #fffb04;
+        border: 1px;
+        border-color: #242424;
+        font-size: 30px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        z-index: 2000;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    .btn:active {
+        transform: scale(0.9);
+    }
+
+    .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 900;
+    }
+
+}
+
+/* ======================================================
+   TABLET (max-width: 1024px)
+====================================================== */
+
+@media (max-width: 768px) {
+
+    /* por defecto oculto */
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    /* si open = true */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .div {
+        margin-top: 170px;
+    }
+
+    /* botón visible */
+    .btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #111;
+        color: #fffb04;
+        border: 1px;
+        border-color: #111;
+        font-size: 30px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        z-index: 2000;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    .btn:active {
+        transform: scale(0.9);
+    }
+
+    .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 900;
+    }
+
+}
+
+/* ======================================================
+   TABLET HORIZONTAL (landscape)
+====================================================== */
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    .sidebar {
+        width: 180px;
+    }
+
+    .sidebar img {
+        width: 195px;
+        height: 210px;
+    }
+}
+
+/* ======================================================
+   MOBILE estándar (portrait)
+====================================================== */
+
+@media (max-width: 480px) and (orientation: portrait) {
+    
+    .sidebar {
+        width: 150px;
+    }
+
+    .sidebar img {
+        width: 175px;
+        height: 190px;
+    }
+
+    .img{
+        margin-bottom: 20px;
+    }
+
+    .div {
+        margin-top: 60px;
+    }
+
+    .sidebar a {
+        font-size: 1rem;
+    }
+
+    .btn {
+        font-size: 25px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+/* ======================================================
+   MOBILE Landscape
+====================================================== */
+
+@media (orientation: landscape) and (max-height: 500px) {
+
+    .sidebar {
+        width: 130px;
+    }
+
+    .sidebar img {
+        display: none;
+    }
+
+    .sidebar a {
+        font-size: 1rem;
+    }
+    
+    .div {
+        margin-top: 35px;
+    }
+
+    .btn {
+        font-size: 25px;
+        top: 15px;
+        left: 15px;
+    }
+
+    /**************************************************************************************************************/
+
+    /* por defecto oculto */
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    /* si open = true */
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* botón visible */
+    .btn {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #111;
+        color: #fffb04;
+        border: 1px;
+        border-color: #242424;
+        font-size: 25px;
+        padding: 6px 10px;
+        border-radius: 8px;
+        z-index: 1000;
+        cursor: pointer;
+        outline: none;
+        transition: 0.2s;
+    }
+
+    .btn:active {
+        transform: scale(0.9);
+    }
+
+    .btn:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn:focus-visible {
+        outline: none;
+        box-shadow: none;
+    }
+
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.55);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        z-index: 900;
+    }
+
+}
+
+/* ======================================================
+   MOBILE PEQUEÑO (max-width: 360px)
+====================================================== */
+
+@media (max-width: 360px) {
+
+    .sidebar {
+        width: 120px;
+    }
+
+    .sidebar img {
+        width: 155px;
+        height: 170px;
+    }
+
+    .div {
+        margin-top: 30px;
+    }
+
+    .sidebar a {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        font-size: 18px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .img {
+        margin-bottom: 10px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 375px) {
+
+    .div {
+        margin-top: 30px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 320px) {
+
+    .div {
+        margin-top: 0px;
+    }
+}
+
+
+
