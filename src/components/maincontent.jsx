@@ -18,6 +18,8 @@ import icoas from "../assets/images/as.png"
 import dorichips from "../assets/images/dorichips.png"
 import qsabores from "../assets/images/qsabores.jpeg"
 import lcv from "../assets/images/lcv.jpeg"
+import kiffa from "../assets/images/kiffa.png"
+import parqueadero from "../assets/images/parqueadero.png"
 import certificadoTEC from "../assets/images/certTEC.jpeg"
 import certificadoING from "../assets/images/progresoIng.jpg"
 
@@ -82,15 +84,15 @@ const MainContent = () => {
           <ul>
             <li>
               <div className="p_dorchips">
-                <img className="p-img" src={dorichips} alt="GDI - Dorichips" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/Proyecto-Dorichips" target="_blank">
+                <img className="p-img" src={kiffa} alt="Kiffa Bar" />
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Kiffas/tree/main" target="_blank">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
-                  <h2>GDI - DORICHIPS</h2>
+                  <h2>KIFFA BAR</h2>
                   <p>
                     Aplicacion de escritorio para la gestion
-                    de ventas e inventario de la tienda de comidas rapidas Dorichips. 
+                    de ventas e inventario de Kiffa Bar. 
                   </p>
                   <div>
                     <img src={icocsharp} alt="" />
@@ -102,12 +104,12 @@ const MainContent = () => {
             </li>
             <li>
               <div className="p_qsabores">
-                <img className="p-img" src={qsabores} alt="GDI - Q'SABORES" />
+                <img className="p-img" src={qsabores} alt="Q'SABORES" />
                 <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Q-SABORES" target="_blank">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
-                  <h2>GDI - Q'SABORES</h2>
+                  <h2>Q'SABORES</h2>
                   <p>
                     Aplicación web desarrollada para ser un sistema administrativo
                     de ventas e inventario para el negocio local Q'Sabores.
@@ -115,8 +117,28 @@ const MainContent = () => {
                   <div>
                     <img src={icoreact} alt="" />
                     <img src={icopython} alt="" />
+                    <img src={icocss} alt="" />
                   </div>
                 </div>  
+              </div>
+            </li>
+            <li>
+              <div className="p_dorchips">
+                <img className="p-img" src={parqueadero} alt="PARQUEADERO KIFFA" />
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/Parquedero-Kiffas" target="_blank">
+                  <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                </a>
+                <div className="p-info">
+                  <h2>PARQUEADERO KIFFA</h2>
+                  <p>
+                    Sistema integral de escritorio para la gestión  y administración total del parqueadero kiffa. 
+                  </p>
+                  <div>
+                    <img src={icocsharp} alt="" />
+                    <img src={iconet} alt="" />
+                    <img src={icomysql} alt="" />
+                  </div>
+                </div>
               </div>
             </li>
             <li>
