@@ -17,7 +17,7 @@ import icogit from "../assets/images/git.png"
 import icoas from "../assets/images/as.png"
 import dorichips from "../assets/images/dorichips.png"
 import qsabores from "../assets/images/qsabores.jpeg"
-import lcv from "../assets/images/lcv.jpeg"
+import lcv from "../assets/images/nacional.png"
 import kiffa from "../assets/images/kiffa.png"
 import parqueadero from "../assets/images/parqueadero.png"
 import certificadoTEC from "../assets/images/certTEC.jpeg"
@@ -150,8 +150,8 @@ const MainContent = () => {
                 <div className="p-info">
                   <h2>La Curva Verdolaga</h2>
                   <p>
-                    Pagina web desarrollada cuando me encontraba en formación,
-                    es un fanspage dirigido al club de futbol ateltico nacional.
+                    Fanspage dedicada al club de fútbol atletico nacional 
+                    que brinda contenido de interes para sus seguidores.
                   </p>
                   <div>
                     <img src={icohtml} alt="" />
@@ -170,8 +170,8 @@ const MainContent = () => {
                 <div className="p-info">
                   <h2>GDI - DORICHIPS</h2>
                   <p>
-                    Aplicacion de escritorio para la gestion
-                    de ventas e inventario de la tienda de comidas rapidas Dorichips. 
+                    Software de escritorio para administrar las ventas e inventario de la 
+                    tienda de comidas rápidas Dorichips. 
                   </p>
                   <div>
                     <img src={icocsharp} alt="" />
