@@ -263,12 +263,20 @@
 @media (max-width: 480px) and (orientation: portrait) {
     
     .sidebar {
-        width: 150px;
+        width: 160px;
     }
 
     .sidebar img {
         width: 175px;
-        height: 190px;
+        height: 190px;  
+        object-fit: cover;
+        border-radius: 20px; /* o el valor que estés usando */
+        display: block;
+
+        /* Fix para glitch móvil */
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
     }
 
     .img{
@@ -419,7 +427,7 @@
 @media (orientation: landscape) and (max-height: 375px) {
 
     .div {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 }
 
