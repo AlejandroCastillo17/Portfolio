@@ -20,7 +20,7 @@ import qsabores from "../assets/images/qsabores.jpeg"
 import lcv from "../assets/images/nacional.png"
 import kiffa from "../assets/images/kiffa.png"
 import parqueadero from "../assets/images/parqueadero.png"
-import certificadoTEC from "../assets/images/certTEC.jpeg"
+import certificadoTEC from "../assets/images/Tec.jpeg"
 import certificadoING from "../assets/images/progresoIng.jpg"
 
 const MainContent = () => {
@@ -57,7 +57,7 @@ const MainContent = () => {
               si quieres colaborar o compartir ideas. ¡Gracias por visitar!
             </p>  
           </div>
-          <a href="/HOJADEVIDA-DACP.pdf" download="HOJADEVIDA-DACP.pdf">
+          <a href="/HOJA DE VIDA - DACP V3.pdf" download="HOJA DE VIDA - DACP V3.pdf">
             <button> Descarga mi Hoja de vida </button>
           </a>
         </div>
