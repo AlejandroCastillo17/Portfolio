@@ -7,6 +7,7 @@ export default defineConfig({
     host: true
   },
   build: {
-    sourcemap: false
+    sourcemap: false,
+    minify: 'terser'
   }
 })
