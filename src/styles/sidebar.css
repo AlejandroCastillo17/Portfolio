@@ -24,8 +24,13 @@
 .sidebar img {
     width: 220px;
     height: 230px;
-    border-radius: 30%;
     filter: drop-shadow(0 10px 25px rgb(255, 251, 4, 0.3));
+    object-fit: cover;
+    border-radius: 20px; 
+    display: block;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
 }
 
 .sidebar ul {
@@ -250,9 +255,19 @@
         width: 180px;
     }
 
+    .div {
+        margin-top: 60px;
+    }
+
     .sidebar img {
         width: 195px;
         height: 210px;
+        object-fit: cover;
+        border-radius: 20px; 
+        display: block;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        will-change: transform;
     }
 }
 
@@ -270,10 +285,9 @@
         width: 175px;
         height: 190px;  
         object-fit: cover;
-        border-radius: 20px; /* o el valor que estés usando */
+        border-radius: 20px;
         display: block;
 
-        /* Fix para glitch móvil */
         transform: translateZ(0);
         backface-visibility: hidden;
         will-change: transform;
