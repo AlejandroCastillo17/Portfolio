@@ -72,7 +72,7 @@ const MainContent = () => {
               del mundo real. Además, cuento con experiencia en desarrollo de aplicaciones de escritorio, 
               movil y desarrollo web. Me encuentro ampliando mis habilidades en desarrollo front-end
               y back-end, con un gran interés en aprender y crear soluciones innovadoras, productivas
-              y creativas..  
+              y creativas.  
             </p>
           </div>
         </div>
