@@ -19,7 +19,7 @@ import dorichips from "../assets/images/dorichips.png"
 import qsabores from "../assets/images/qsabores.jpeg"
 import lcv from "../assets/images/nacional.png"
 import kiffa from "../assets/images/Kiffa.png"
-import parqueadero from "../assets/images/parqueadero.png"
+import parqueadero from "../assets/images/Parqueadero.png"
 import certificadoTEC from "../assets/images/Tec.jpeg"
 import certificadoING from "../assets/images/progresoIng.jpg"
 
