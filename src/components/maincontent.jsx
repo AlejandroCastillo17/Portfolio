@@ -57,7 +57,7 @@ const MainContent = () => {
               si quieres colaborar o compartir ideas. ¡Gracias por visitar!
             </p>  
           </div>
-          <a href="/HOJA DE VIDA - DACP V3.pdf" download="HOJA DE VIDA - DACP V3.pdf">
+          <a href="/HOJA DE VIDA - DACP.pdf" download="HOJA DE VIDA - DACP V3.pdf">
             <button> Descarga mi Hoja de vida </button>
           </a>
         </div>
