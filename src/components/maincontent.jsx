@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/maincontent.css";
+import { useScrollReveal } from "../hooks/useScrollReveal";
 import icohtml from "../assets/images/html.png"
 import icocss from "../assets/images/css.png"
 import icoreact from "../assets/images/react.png"
@@ -25,6 +26,8 @@ import certificadoING from "../assets/images/progresoIng.jpg"
 
 const MainContent = () => {
 
+  useScrollReveal();
+
   const [showModal, setShowModal] = useState(false);
   const [certActivo, setCertActivo] = useState(null);
 
@@ -43,10 +46,10 @@ const MainContent = () => {
 
       <section id="inicio">
         <div className="ini">
-          <h1>Diego Alejandro Castillo Pérez</h1>
-          <h2>Desarrollador de software</h2>
-          <div>
-            <p>
+          <h1 class="reveal">Diego Alejandro Castillo Pérez</h1>
+          <h2 class="reveal">Desarrollador de software</h2>
+          <div class="reveal">
+            <p class="reveal">
               ¡Bienvenido a mi portafolio!  
 
               Aquí encontrarás una muestra de mis proyectos, habilidades y experiencia en desarrollo
@@ -57,17 +60,26 @@ const MainContent = () => {
               si quieres colaborar o compartir ideas. ¡Gracias por visitar!
             </p>  
           </div>
-          <a href="/HOJA DE VIDA - DACP.pdf" download="HOJA DE VIDA - DACP V3.pdf">
-            <button> Descarga mi Hoja de vida </button>
-          </a>
+            <a class="reveal" href="/HOJA DE VIDA - DACP.pdf" download="HOJA DE VIDA - DACP V3.pdf">
+              <button class="reveal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Descarga mi Hoja de Vida
+              </button>
+            </a>
         </div>
       </section>
 
       <section id="sobre-mi">
         <div className="sobremi">
-          <h1>Sobre Mí</h1>
-          <div>
-            <p>Soy un Tecnólogo en Desarrollo de Software y estudiante de noveno semestre de
+          <h1 class="reveal">Sobre Mí</h1>
+          <div class="reveal">
+            <p class="reveal">Soy un Tecnólogo en Desarrollo de Software y estudiante de noveno semestre de
               Ingeniería de Software. Me apasiona explorar nuevas tecnologías y enfrentar desafíos
               del mundo real. Además, cuento con experiencia en desarrollo de aplicaciones de escritorio, 
               movil y desarrollo web. Me encuentro ampliando mis habilidades en desarrollo front-end
@@ -80,12 +92,12 @@ const MainContent = () => {
 
       <section id="proyectos">
         <div className="proyetos">
-          <h1>Proyectos</h1>
+          <h1>Proyectos Desarrollados</h1>
           <ul>
             <li>
               <div className="p_dorchips">
                 <img className="p-img" src={kiffa} alt="Kiffa Bar" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Kiffas/tree/main" target="_blank">
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Kiffas/tree/main" target="_blank" rel="noopener noreferrer">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
@@ -105,7 +117,7 @@ const MainContent = () => {
             <li>
               <div className="p_qsabores">
                 <img className="p-img" src={qsabores} alt="Q'SABORES" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Q-SABORES" target="_blank">
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/GDI-Q-SABORES" target="_blank" rel="noopener noreferrer">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
@@ -125,7 +137,7 @@ const MainContent = () => {
             <li>
               <div className="p_dorchips">
                 <img className="p-img" src={parqueadero} alt="PARQUEADERO KIFFA" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/Parquedero-Kiffas" target="_blank">
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/Parquedero-Kiffas" target="_blank" rel="noopener noreferrer">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
@@ -144,13 +156,13 @@ const MainContent = () => {
             <li>
               <div className="p_lcv">
                 <img className="p-img" src={lcv} alt="La Curva Verdolaga" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/La-Curva-Verdolaga" target="_blank">
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/La-Curva-Verdolaga" target="_blank" rel="noopener noreferrer">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
                   <h2>La Curva Verdolaga</h2>
                   <p>
-                    Fanspage dedicada al club de fútbol atletico nacional 
+                    Fanspage dedicada al club de fútbol Atlético Nacional
                     que brinda contenido de interes para sus seguidores.
                   </p>
                   <div>
@@ -164,7 +176,7 @@ const MainContent = () => {
             <li>
               <div className="p_dorchips">
                 <img className="p-img" src={dorichips} alt="GDI - Dorichips" />
-                <a className="p-link" href="https://github.com/AlejandroCastillo17/Proyecto-Dorichips" target="_blank">
+                <a className="p-link" href="https://github.com/AlejandroCastillo17/Proyecto-Dorichips"  target="_blank" rel="noopener noreferrer">
                   <svg  xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
                 </a>
                 <div className="p-info">
@@ -187,10 +199,10 @@ const MainContent = () => {
 
       <section id="educacion">
         <div className="educa">
-          <h1>Educación</h1>
+          <h1>Formación Académica</h1>
           <div className="cont-edu">
             <div className="edu">
-              <h3>TECNOLOGIA EN DESARROLLO DE SOFTWARE</h3>
+              <h3><span className="punto-activo"></span>TECNOLOGIA EN DESARROLLO DE SOFTWARE</h3>
               <h3>2022 - 2025</h3>
             </div>
             <h4> Institución Universitaria Pascual Bravo</h4>
@@ -198,7 +210,7 @@ const MainContent = () => {
           </div>
           <div className="cont-edu">
             <div className="edu2">
-              <h3>INGENIERIA DE SOFTWARE</h3>
+              <h3><span className="punto-activo"></span>INGENIERIA DE SOFTWARE</h3>
               <h3>2025 - Actualidad</h3>
             </div>
             <h4> Institución Universitaria Pascual Bravo</h4>
@@ -219,37 +231,74 @@ const MainContent = () => {
 
       <section id="competencias">
         <div className="comp">
-          <h1>Competencias</h1>
-          <h2>LENGUAJES DE PROGRAMACIÓN</h2>
-          <div>
-            <img src={icocsharp} alt="" />
-            <img src={icohtml} alt="" />
-            <img src={icocss} alt="" />
-            <img src={icojs} alt="" />
-            <img src={icophp} alt="" />
-            <img src={icojava} alt="" />
-            <img src={icosql} alt="" />
-          </div>
-          <h2>FRAMEWORKS Y LIBRERIAS</h2>
-          <div>
-            <img src={iconet} alt="" />
-            <img src={icoreact} alt="" />
-          </div>
-          <h2>SOFTWARE Y HERRAMIENTAS</h2>
-          <div>
-            <img src={icovscode} alt="" />
-            <img src={icovs} alt="" />
-            <img src={icoas} alt="" />
-            <img src={icogit} alt="" />
+          <h1>Habilidades Técnicas</h1>
+          <div class="skills-container">
+            <div class="skill-category">
+              <h2>LENGUAJES DE PROGRAMACIÓN</h2>
+              <div class="skill-items">
+                <div class="skill-tag">
+                  <img src={icocsharp} alt="" /> C#
+                </div>
+                <div class="skill-tag">
+                  <img src={icojs} alt="" /> JavaScript
+                </div>
+                <div class="skill-tag">
+                  <img src={icophp} alt="" /> PHP
+                </div>
+                <div class="skill-tag">
+                  <img src={icopython} alt="" /> Python
+                </div>
+                <div class="skill-tag">
+                  <img src={icojava} alt="" /> Java
+                </div>
+                <div class="skill-tag">
+                  <img src={icosql} alt="" /> SQL
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h2>FRAMEWORKS Y TECNOLOGÍAS</h2>
+              <div class="skill-items">
+                <div class="skill-tag">
+                  <img src={iconet} alt="" /> .Net
+                </div>
+                <div class="skill-tag">
+                  <img src={icoreact} alt="" /> React
+                </div>
+                <div class="skill-tag">
+                  <img src={icohtml} alt="" /> HTML5
+                </div>
+                <div class="skill-tag">
+                  <img src={icocss} alt="" /> CSS3
+                </div>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h2>SOFTWARE Y HERRAMIENTAS</h2>
+              <div class="skill-items">
+                <div class="skill-tag">
+                  <img src={icovscode} alt="" /> VS Code
+                </div>
+                <div class="skill-tag">
+                  <img src={icovs} alt="" /> Visual Studio
+                </div>
+                <div class="skill-tag">
+                  <img src={icoas} alt="" /> Android Studio
+                </div>
+                <div class="skill-tag">
+                  <img src={icogit} alt="" /> Git / GitHub
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="contacto">
         <div className="contenedor">
-          <h1>Contactatame!</h1>
+          <h1>Contacto</h1>
           <div className="contac">
-            <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"
+            <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"
                 fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
@@ -257,11 +306,13 @@ const MainContent = () => {
             </svg>
             <p>
               WhatsApp 
-              <a href="https://wa.me/573004021102"> +57 3004021102 </a>
+              <a href="https://wa.me/573004021102" target="_blank" rel="noopener noreferrer">
+                +57 3004021102
+              </a>
             </p>
           </div>
           <div className="contac">
-            <svg className="ratas" xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  
+            <svg className="ratas" xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  
               fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-mail">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <path d="M22 7.535v9.465a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-9.465l9.445 6.297l.116 .066a1 1 0 0 0 .878 0l.116 -.066l9.445 -6.297z" />
@@ -269,20 +320,22 @@ const MainContent = () => {
             </svg>
             <p>
               Email
-              <a href="mailto:Alejandrocastilloperez17@gmail.com">Alejandrocastilloperez17@gmail.com</a>
+              <a href="mailto:Alejandrocastilloperez17@gmail.com" target="_blank" rel="noopener noreferrer">
+                Alejandrocastilloperez17@gmail.com
+              </a>
             </p>
           </div>
           <div className="icons">
-            <a href="https://www.linkedin.com/in/diego-alejandro-castillo-p%C3%A9rez/">
-              <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  
+            <a href="https://www.linkedin.com/in/diego-alejandro-castillo-pérez/" target="_blank" rel="noopener noreferrer">
+              <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  
                 stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  
                 class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" 
                 d="M0 0h24v24H0z" fill="none"/><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" />
                 <path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
               </svg>
             </a>
-            <a href="https://github.com/AlejandroCastillo17">
-              <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="40"  height="40"  viewBox="0 0 24 24"  fill="none"  
+            <a href="https://github.com/AlejandroCastillo17" target="_blank" rel="noopener noreferrer">
+              <svg  className="ratas" xmlns="http://www.w3.org/2000/svg"  width="35"  height="35"  viewBox="0 0 24 24"  fill="none"  
                 stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
               </svg>

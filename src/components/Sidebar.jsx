@@ -54,7 +54,7 @@ const Sidebar = () => {
             <div className="img">
               <img src={imagen} alt="Alejo" />
             </div>
-            <li><a onClick={toggleSidebar} href="#inicio" className={activeSection === "inicio" ? "active-link" : ""}>ALEJANDRO</a></li>
+            <li><a onClick={toggleSidebar} href="#inicio" className={activeSection === "inicio" ? "active-link" : ""}>INICIO</a></li>
             <li><a onClick={toggleSidebar} href="#sobre-mi" className={activeSection === "sobre-mi" ? "active-link" : ""}>SOBRE MI</a></li>
             <li><a onClick={toggleSidebar} href="#proyectos" className={activeSection === "proyectos" ? "active-link" : ""}>PROYECTOS</a></li>
             <li><a onClick={toggleSidebar} href="#educacion" className={activeSection === "educacion" ? "active-link" : ""}>EDUCACION</a></li>

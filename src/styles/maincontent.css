@@ -1,10 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&display=swap');
+
 html {
   font-size: 16px;
 }
 
+.ini,
+.sobremi,
+.proyetos,
+.educa,
+.cont-edu,
+.comp,
+.contenedor {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .main-content {
     flex-grow: 1; 
-    margin-left: 295px; 
+    margin-left: 285px; 
     padding: 0;
     min-height: 100vh;
     overflow-y: auto; 
@@ -25,7 +44,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #242424, #000000 );
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .ini {
@@ -40,15 +59,15 @@ html {
     margin:0;
     margin-bottom: 10px;
     color:white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", sans-serif;
 }
 
 .ini h2{
     font-size: 2.2rem;
     font-weight: 600;
     margin:0;
-    color: #fffb04;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #00ffff;
+    font-family: "Outfit", sans-serif;
     animation: escribiendo 5s steps(45, end) infinite;
     white-space: nowrap;
     display: inline-block;  
@@ -63,7 +82,7 @@ html {
 .ini p {
     font-size: 1.25rem;
     font-weight: 400;
-    font-family: monospace;
+    font-family: "Outfit", sans-serif;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.6;
@@ -73,30 +92,39 @@ html {
 }
 
 .ini button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     text-align: center;
     border: none;
     font-size: 1rem;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
     color: rgb(255, 255, 255);
     padding: 14px 28px;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #444444; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease-in-out; 
+    border-radius: 8px;
+    background-color: #0f172a;
+    box-shadow:
+        0 0 12px 3px  rgba(0, 255, 255, 0.6),
+        0 0 30px 8px  rgba(0, 255, 255, 0.3),
+        0 0 60px 15px rgba(0, 255, 255, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.15s ease;
     outline: none;
 }
-      
+
 .ini button:hover {
-    box-shadow: 0px 8px 16px #fffb04;
-    color: #fffb04;
+    box-shadow:
+        0 0 16px 5px  rgba(0, 255, 255, 0.85),
+        0 0 40px 12px rgba(0, 255, 255, 0.45),
+        0 0 80px 20px rgba(0, 255, 255, 0.2);
+    color: #00ffff;
 }
 
 /* Animación de escribir */
 @keyframes escribiendo {
     from { width: 0 }
-    to { width: 25ch }
+    to { width: 22ch }
 }
 
 /* =============================
@@ -109,7 +137,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #242424, #000000);
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .sobremi {
@@ -117,19 +145,19 @@ html {
     width: 80%;
     text-align: center;
     padding-bottom: 20px;
-    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+    box-shadow: 0 0 40px rgba(4, 238, 255, 0.4);
 }
 
 .sobremi h1 {
     font-size: 3rem;
     font-weight: 700;
     margin:0;
-    color:#fffb04;
+    color:#00ffff;
     text-align: center;
     padding-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:"Outfit", sans-serif;
 
-    animation: escribiendo 3.5s steps(35, end) infinite;
+    animation: escribiendo 3.5s steps(65, end) infinite;
     white-space: nowrap;
     display: inline-block;  
     overflow: hidden;
@@ -143,7 +171,7 @@ html {
 .sobremi p {
     font-size: 1.25rem; 
     font-weight: 400;
-    font-family: monospace;
+    font-family: "Outfit", sans-serif;
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.7;
@@ -164,7 +192,7 @@ html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left, #242424, #000000);
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .proyetos {
@@ -178,7 +206,7 @@ html {
     font-weight: 700;
     margin: 0;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: bold;
     margin-top: 25px;
 
@@ -205,7 +233,7 @@ html {
     list-style: none;
     width: 90%;
     height: 180px;
-    background: linear-gradient(to right,#242424, #000000);
+    background: linear-gradient(to right, #020617, #0f172a);
     padding: 0; /* padding lo manejo dentro de .card-inner */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -257,7 +285,7 @@ html {
 }
 .p-link:hover { 
     transform: scale(1.02);   
-    color: #000000; 
+    color: #00ffff; 
     text-decoration: none; 
 }
 
@@ -271,13 +299,15 @@ html {
 .proyetos li h2 {
     font-size: 1.05rem;
     font-weight: 600;
-    color: #fffb04;
+    color: #00ffff;
     margin: 0 0 6px 0;
+    font-family: "Outfit", sans-serif;
 }
 
 .proyetos li p {
     color: white;
     font-size: 0.78rem;
+    font-family: "Outfit", sans-serif;
     font-weight: 400;
     line-height: 1.45;
     margin: 0 0 10px 0;
@@ -302,7 +332,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left, #242424, #000000);
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .educa {
@@ -314,10 +344,10 @@ html {
     font-size: 3rem;
     font-weight: 700;
     margin:0;
-    color:#fffb04;
+    color:#00ffff;
     text-align: center;
     padding-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", sans-serif;
 
     animation: escribiendo 3.5s steps(35, end) infinite;
     white-space: nowrap;
@@ -328,7 +358,7 @@ html {
 .cont-edu {
     width: 70%;
     height: 130px;
-    background: linear-gradient(to right,#242424, #000000);
+    background: linear-gradient(to right, #020617, #0f172a);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -336,17 +366,34 @@ html {
     margin: 45px auto;
 }
 
+.punto-activo {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #00ffff;
+  margin-right: 10px;
+  box-shadow:
+    0 0 6px 2px rgba(0, 255, 255, 0.7),
+    0 0 14px 4px rgba(0, 255, 255, 0.4),
+    0 0 26px 6px rgba(0, 255, 255, 0.15);
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
 
 .cont-edu h3{
     font-size: 1rem;
     font-weight: 500;
     margin:0 0 15px 0;
+    font-family: "Outfit", sans-serif;
 }
 
 .cont-edu h4 {
     font-size: 0.95rem;
     font-weight: 400;
     margin:0 0 15px 0;
+    font-family: "Outfit", sans-serif;
 }
 
 .edu, .edu2 {
@@ -357,23 +404,33 @@ html {
 }
 
 .educa button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
     border: none;
     font-size: 1rem;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
     color: rgb(255, 255, 255);
     padding: 14px 28px;
     cursor: pointer;
-    border-radius: 5px;
-    background-color: #444444; 
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease-in-out; 
+    border-radius: 8px;
+    background-color: #0f172a;
+    box-shadow:
+        0 0 4px 1px  rgba(0, 255, 255, 0.4),
+        0 0 10px 2px rgba(0, 255, 255, 0.15),
+        0 0 20px 4px rgba(0, 255, 255, 0.06);
+    transition: box-shadow 0.3s ease, transform 0.15s ease;
     outline: none;
 }
       
 .educa button:hover {
-    box-shadow: 0px 8px 16px #fffb04;
-    color: #fffb04;
+    box-shadow:
+        0 0 6px 2px  rgba(0, 255, 255, 0.55),
+        0 0 16px 4px rgba(0, 255, 255, 0.25),
+        0 0 30px 7px rgba(0, 255, 255, 0.1);
+    color: #00ffff;
 }
 
 /* =============================
@@ -394,7 +451,7 @@ html {
 }
   
 .modal-contenido {
-    background: #111;
+    background: #0f172a;
     padding: 20px;
     border-radius: 12px;
     max-width: 80%;
@@ -416,7 +473,7 @@ html {
 }
 
 .cerrar {
-    background:#111;
+    background:#0f172a;
     border: none;
     color: #fff;
     cursor: pointer;
@@ -428,7 +485,7 @@ html {
 }
 
 .cerrar:hover {
-    color: #fffb04;
+    color: #00ffff;
 }
 
 /* =============================
@@ -441,7 +498,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #242424, #000000);
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .comp {
@@ -449,16 +506,16 @@ html {
     width: 80%;
     text-align: center;
     padding-bottom: 20px;
-    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+    box-shadow: 0 0 40px rgba(4, 238, 255, 0.4);
 }
 
 .comp h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin:30px 0 20px 0;
+    margin:30px 0 10px 0;
     color:white;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", sans-serif;
 
     animation: escribiendo 3.5s steps(35, end) infinite;
     white-space: nowrap;
@@ -466,28 +523,60 @@ html {
     overflow: hidden;
 }
 
-.comp h2 {
-    font-size: 1.35rem;
-    font-weight: 400;
-    margin:0 0 3px 0;
-    color: #fffb04;
-    font-family: monospace;
+.skills-container {
+    display: grid;
+    gap: 0;
+    margin-bottom: 20px;
 }
 
-.comp div img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    padding-right: 12px;
-    margin:0;
+.skill-category h2 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #00ffff;
+    font-family: "Outfit", sans-serif;
 }
 
-.comp div {
-    margin-bottom: 25px;
+.skill-category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 1rem 0;
 }
 
-.comp div img:hover {
-    animation: rebote 1s;
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 0 2.5rem;
+}
+
+.skill-tag {
+    background: #0f172a;
+    padding: 0.55rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid #00ffff;
+    transition: all 0.3s ease;
+    font-size: 0.8rem;
+    font-family: "Outfit", sans-serif;
+    font-weight: 600;
+}
+
+.skill-tag:hover {
+    background: #00ffff;
+    border-color: #444444;
+    transform: translateY(-5px);
+    color:#444444;
+}
+
+.skill-tag img {
+    width: 32px;
+    height: 32px;
 }
 
 /* =============================
@@ -500,7 +589,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to left, #242424, #000000);
+    background: linear-gradient(to left, #020617, #0f172a );
 }
 
 .contenedor {
@@ -508,16 +597,16 @@ html {
     width: 80%;
     text-align: center;
     padding-bottom: 20px;
-    box-shadow: 0 0 40px rgba(255, 251, 4, 0.4);
+    box-shadow: 0 0 40px rgba(4, 238, 255, 0.4);
 }
 
 .contenedor h1 {
     font-size: 3rem;
     font-weight: 700;
     margin:35px 0 30px 0;
-    color:#fffb04;
+    color:#00ffff;
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Outfit", sans-serif;
 
     animation: escribiendo 3.5s steps(35, end) infinite;
     white-space: nowrap;
@@ -530,14 +619,14 @@ html {
     flex-direction: row;
     justify-content: center;
     gap: 15px;
-    color: #fffb04;
+    color: #00ffff;
     padding-bottom:20px ;
 }
 
 .contac p {
-    font-family: monospace;
+    font-family: "Outfit", sans-serif;
     color: white;
-    font-size: 1.35rem;
+    font-size: 1.25rem; 
     font-weight: 400;
     margin: 0;
 }
@@ -545,7 +634,7 @@ html {
 .contac a {
     text-decoration: underline;
     padding-left: 10px;
-    font-size: 1.35rem;
+    font-size: 1.25rem; 
     font-weight: 400;
     color: aqua;
 }
@@ -558,7 +647,7 @@ html {
 }
 
 .icons a {
-    color: #fffb04;
+    color: #00ffff;
 }
 
 .icons svg:hover {
@@ -698,9 +787,8 @@ html {
         font-size: 1.25rem;
     }
 
-    .comp div img {
-        width: 45px;
-        height: 45px;
+    .skill-items {
+        gap: 0.7rem;
     }
 
     /* contacto */ 
@@ -959,9 +1047,13 @@ html {
         font-size: 1rem;
     }
 
+    .skill-items {
+        gap: 0.6rem;
+    }
+
     .comp div img {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
     }
 
     /* Contacto */
@@ -1040,6 +1132,10 @@ html {
     }
 
     /* Proyectos */
+    .proyetos {
+        margin-top: 1rem;
+    }
+
     .proyetos h1 {
         font-size: 1.55rem;
         margin-top: 45px;
@@ -1064,7 +1160,7 @@ html {
 
     .proyetos li {
         width: 90%;
-        height: 80%;
+        height: 75%;
     }
 
     .proyetos li h2 {
@@ -1118,7 +1214,7 @@ html {
     }
 
     .modal-contenido img {
-        max-height: 70vh;
+        max-height: 60vh;
     }
 
     /* Competencias */
@@ -1130,6 +1226,7 @@ html {
 
     .comp {
         padding: 0;
+        margin-top: 5rem;
     }
 
     .comp div {
@@ -1154,6 +1251,8 @@ html {
 
     .contenedor {
         padding-bottom: 10px;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
     }
 
     .contac {
@@ -1387,6 +1486,11 @@ html {
     .proyetos li p {
         font-size: 0.8rem;
     }
+    
+    .comp div img {
+        width: 20px;
+        height: 20px;
+    }
 
 }
 
@@ -1507,6 +1611,7 @@ html {
 
     .cont-edu button {
         padding: 6px 10px;
+        font-size: 0.85rem;
     }
 
     .edu, .edu2 {
@@ -1523,8 +1628,17 @@ html {
     }
 
     .comp div img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .skill-items {
+        gap: 0.5rem;
+    }
+
+    .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem;
     }
 
     /* Contacto */
@@ -1562,6 +1676,33 @@ html {
     .ini h1 {
         margin-top: 50px;
     }
+
+    .contenedor {
+        padding-bottom: 10px;
+        margin-top: 2rem;
+    }
+
+    .comp div img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 
